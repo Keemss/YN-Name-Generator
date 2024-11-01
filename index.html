@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Young Nigga Name Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        #generateBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #generatedName {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333;
+        }
+        .input-field {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Young Nigga Name Generator</h1>
+    <p>Enter your details below to find out your Young Nigga Name!</p>
+
+    <div class="input-field">
+        <label for="hoodName">What is yo hood name?</label><br>
+        <input type="text" id="hoodName" placeholder="Enter hood name">
+    </div>
+
+    <div class="input-field">
+        <label for="skreetName">What are you known for in the skreets?</label><br>
+        <input type="text" id="skreetName" placeholder="Enter street rep">
+    </div>
+
+    <button id="generateBtn" onclick="generateName()">Generate Name</button>
+
+    <p id="generatedName"></p>
+
+    <script>
+        function generateName() {
+            // Get the values from the input fields
+            const hoodName = document.getElementById("hoodName").value;
+            const skreetName = document.getElementById("skreetName").value;
+
+            // Check if both fields have values
+            if (hoodName && skreetName) {
+                // Display the generated name
+                document.getElementById("generatedName").innerText = 
+                    "Yo Young Nigga Name Is: " + hoodName + " " + skreetName;
+            } else {
+                // Prompt the user to fill in both fields if any are empty
+                alert("Please enter both yo hood name and what you known for in the skreets.");
+            }
+        }
+    </script>
+</body>
+</html>
